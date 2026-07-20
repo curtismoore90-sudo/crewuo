@@ -3,11 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif; /* Matching the classic font style in the images */
+    font-family: 'Times New Roman', Times, serif; 
 }
 
 body {
-    background-color: #060e1f; /* Deep, dark navy background from the image */
+    background-color: #060e1f; 
     color: #ffffff;
     display: flex;
     justify-content: center;
@@ -17,16 +17,16 @@ body {
 
 .main-container {
     width: 100%;
-    max-width: 480px; /* Constraining to a phone-like width to match the screenshot */
+    max-width: 480px; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 60px; /* Space for the footer */
+    padding-bottom: 60px; 
 }
 
 h2 {
     font-size: 2.2rem;
-    color: #e5c36f; /* The specific gold color from image_1.png */
+    color: #e5c36f; 
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 10px;
@@ -35,7 +35,7 @@ h2 {
 
 p {
     font-size: 1rem;
-    color: #a8b2c1; /* Subtle blue-gray for text, matching the images */
+    color: #a8b2c1; 
     text-align: center;
     line-height: 1.5;
     margin-bottom: 20px;
@@ -49,7 +49,7 @@ section {
     align-items: center;
 }
 
-/* --- HEADER SECTION (image_0.png) --- */
+/* --- HEADER SECTION --- */
 header {
     width: 100%;
     display: flex;
@@ -66,13 +66,13 @@ header {
 }
 
 .main-logo {
-    max-width: 80%; /* Adjust as needed for your actual file */
+    max-width: 80%; 
     height: auto;
 }
 
 .subtitle {
     font-size: 0.9rem;
-    color: #00cccc; /* Teal subtitle text */
+    color: #00cccc; 
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 5px;
@@ -80,7 +80,7 @@ header {
 
 .main-title {
     font-size: 3.5rem;
-    color: #e5c36f; /* Gold main title */
+    color: #e5c36f; 
     text-transform: uppercase;
     letter-spacing: 4px;
     margin-bottom: 15px;
@@ -94,7 +94,7 @@ header {
     display: flex;
     align-items: center;
     font-size: 0.9rem;
-    color: #ff3333; /* Default offline red color */
+    color: #ff3333; 
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -106,10 +106,10 @@ header {
     border-radius: 50%;
     display: inline-block;
     margin-right: 8px;
-    box-shadow: 0 0 10px #ff3333; /* Glowing effect */
+    box-shadow: 0 0 10px #ff3333; 
 }
 
-/* --- BUTTONS (image_1.png) --- */
+/* --- BUTTONS --- */
 .action-buttons {
     flex-direction: column;
     gap: 15px;
@@ -135,7 +135,7 @@ header {
 }
 
 .btn-discord {
-    background-color: #e5c36f; /* Gold for the Discord button */
+    background-color: #e5c36f; 
     color: #060e1f;
 }
 
@@ -144,23 +144,23 @@ header {
 }
 
 .btn-server {
-    background-color: #0d1a33; /* Darker navy for the server button */
+    background-color: #0d1a33; 
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: #a8b2c1;
 }
 
 .btn-server i {
-    color: #00cccc; /* Teal anchor icon */
+    color: #00cccc; 
 }
 
 .btn-server:hover {
     background-color: #1a2c4d;
 }
 
-/* --- SERVER CONNECTION PANEL (image_1.png) --- */
+/* --- SERVER CONNECTION PANEL --- */
 .server-connection-panel .connection-card {
     background-color: #0d1a33;
-    border: 1px solid #e5c36f; /* Gold border from image_1.png */
+    border: 1px solid #e5c36f; 
     border-radius: 10px;
     width: 100%;
     padding: 20px;
@@ -171,7 +171,7 @@ header {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
-    padding: 10px 0;
+    padding: 12px 0;
 }
 
 .connection-item:not(:last-child) {
@@ -180,26 +180,27 @@ header {
 
 .connection-label {
     font-size: 0.8rem;
-    color: #00cccc; /* Teal labels */
+    color: #00cccc; 
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-bottom: 2px;
 }
 
 .connection-value {
     font-size: 1.8rem;
     color: #ffffff;
-    font-family: 'Courier New', Courier, monospace; /* Monospace for values */
+    font-family: 'Courier New', Courier, monospace; 
     font-weight: bold;
 }
 
 .copy-btn {
     background: none;
     border: none;
-    color: #e5c36f; /* Gold copy icon */
+    color: #e5c36f; 
     font-size: 1.2rem;
     cursor: pointer;
     grid-column: 2;
-    grid-row: 1 / span 2; /* Spanning both rows */
+    grid-row: 1 / span 2; 
     margin-left: 15px;
     padding: 10px;
     border-radius: 5px;
@@ -210,7 +211,7 @@ header {
     background-color: rgba(229, 195, 111, 0.1);
 }
 
-/* --- DISCORD LIVE PANEL (image_2.png) --- */
+/* --- DISCORD LIVE PANEL --- */
 .discord-live-panel {
     align-items: center;
 }
@@ -233,82 +234,14 @@ header {
     font-size: 0.9rem;
 }
 
-.online-count {
-    color: #ffffff;
-    font-weight: bold;
-}
-
-.server-name {
-    color: #00cccc; /* Teal server name */
-    font-weight: bold;
-}
-
-.user-grid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 column grid */
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.user-card {
-    background-color: #0d1a33;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-}
-
-.avatar-container {
-    position: relative;
-    margin-bottom: 10px;
-}
-
-.avatar-img {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    border: 2px solid #e5c36f; /* Gold border around avatars */
-    display: block;
-}
-
-.user-card .status-dot {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin-right: 0;
-    border: 2px solid #0d1a33; /* Matching the card bg */
-}
-
-/* Different status dot colors */
-.user-card .status-dot.online {
-    background-color: #33ff33;
-    box-shadow: 0 0 10px #33ff33;
-}
-
-.user-card .status-dot.idle {
-    background-color: #ffaa00;
-    box-shadow: 0 0 10px #ffaa00;
-}
-
-.user-name {
-    font-size: 0.9rem;
-    color: #ffffff;
-    font-family: inherit;
-    text-align: center;
-    margin: 0; /* Override default p margin */
-}
-
-/* --- FOOTER (image_2.png) --- */
+/* --- FOOTER --- */
 footer {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
-    color: #e5c36f; /* Gold footer text */
+    color: #e5c36f; 
     font-size: 1rem;
     margin-top: 20px;
 }
