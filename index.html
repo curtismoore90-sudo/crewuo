@@ -13,8 +13,9 @@
         :root {
             --bg-color: #0d0d11;
             --card-bg: rgba(25, 25, 35, 0.6);
-            --accent-gold: #c5a059;
-            --accent-gold-hover: #e5c17b;
+            --accent-gold: #e5c158;
+            --accent-gold-hover: #fce288;
+            --accent-teal: #00b8d4;
             --text-color: #e2e8f0;
             --text-muted: #94a3b8;
             --border-color: rgba(197, 160, 89, 0.2);
@@ -32,7 +33,6 @@
             color: var(--text-color);
             line-height: 1.6;
             overflow-x: hidden;
-            /* Subtle dark fantasy background pattern */
             background-image: radial-gradient(circle at 50% 50%, #1a1a24 0%, #0d0d11 100%);
         }
 
@@ -58,7 +58,7 @@
             color: var(--accent-gold);
             text-decoration: none;
             letter-spacing: 2px;
-            text-shadow: 0 0 10px rgba(197, 160, 89, 0.3);
+            text-shadow: 0 0 10px rgba(229, 193, 88, 0.3);
         }
 
         .nav-links {
@@ -81,14 +81,13 @@
 
         /* Hero Section */
         .hero {
-            height: 85vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 0 20px;
-            margin-top: 60px;
+            padding: 100px 20px 40px 20px;
             position: relative;
         }
 
@@ -100,95 +99,126 @@
             transform: translate(-50%, -50%);
             width: 300px;
             height: 300px;
-            background: rgba(197, 160, 89, 0.05);
+            background: rgba(229, 193, 88, 0.05);
             filter: blur(80px);
             border-radius: 50%;
             z-index: -1;
         }
 
+        .hero-logo {
+            max-width: 100%;
+            width: 380px;
+            height: auto;
+            margin-bottom: 30px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-subheading {
+            color: var(--accent-teal);
+            font-size: 0.95rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
         .hero h1 {
             font-family: 'Cinzel', serif;
-            font-size: 4.5rem;
-            color: #ffffff;
-            letter-spacing: 4px;
-            margin-bottom: 10px;
+            font-size: 4rem;
+            color: var(--accent-gold);
+            letter-spacing: 6px;
+            margin-bottom: 25px;
             text-shadow: 0 4px 20px rgba(0,0,0,0.6);
         }
 
         .hero p {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin-bottom: 40px;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-        }
-
-        .btn {
-            padding: 14px 30px;
-            border-radius: 4px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-        }
-
-        .btn-primary {
-            background-color: var(--accent-gold);
-            color: #000;
-            border: 1px solid var(--accent-gold);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--accent-gold-hover);
-            box-shadow: 0 0 15px rgba(197, 160, 89, 0.4);
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
+            font-size: 1.15rem;
             color: var(--text-color);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 500px;
+            margin-bottom: 30px;
+            line-height: 1.5;
         }
 
-        .btn-secondary:hover {
-            border-color: var(--accent-gold);
-            color: var(--accent-gold);
-            transform: translateY(-2px);
-        }
-
-        /* Server Status Bar */
+        /* Server Status Bar - Now perfectly integrated into the hero */
         .server-status {
-            background: rgba(25, 25, 35, 0.8);
-            padding: 15px 0;
-            text-align: center;
-            border: 1px solid var(--border-color);
-            border-radius: 25px; /* Creates the rounded pill shape */
-            max-width: 350px; /* Constrains width to match the buttons */
-            margin: -20px auto 40px auto; /* Centers the box and positions it below the hero */
+            background: rgba(20, 20, 28, 0.9);
+            padding: 12px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 25px;
+            width: 100%;
+            max-width: 380px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);
         }
 
         .status-indicator {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             font-weight: 600;
-            font-size: 1.1rem;
-            color: #2ecc71; /* Green text */
+            font-size: 1rem;
+            color: #2ecc71; 
             letter-spacing: 1px;
         }
 
         .dot {
-            width: 10px;
-            height: 10px;
-            background-color: #2ecc71; /* Green dot */
+            width: 12px;
+            height: 12px;
+            background-color: #2ecc71;
             border-radius: 50%;
-            box-shadow: 0 0 10px #2ecc71; /* Green glow */
+            box-shadow: 0 0 10px #2ecc71;
+        }
+
+        /* CTA Buttons */
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-width: 380px;
+        }
+
+        .btn {
+            padding: 16px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-gold);
+            color: #111;
+            border: none;
+            box-shadow: 0 4px 15px rgba(229, 193, 88, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-gold-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-dark {
+            background-color: #141a29;
+            color: var(--text-color);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .btn-dark i {
+            color: var(--accent-teal);
+        }
+
+        .btn-dark:hover {
+            border-color: var(--accent-teal);
+            transform: translateY(-2px);
         }
 
         /* Features Section */
@@ -321,11 +351,10 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.8rem; }
-            .nav-links { display: none; } /* Simplified for mobile */
-            .cta-buttons { flex-direction: column; width: 100%; max-width: 300px; }
-            .btn { text-align: center; }
+            .hero h1 { font-size: 3rem; }
+            .nav-links { display: none; }
             .section { padding: 60px 5%; }
+            .hero-logo { width: 90%; }
         }
     </style>
 </head>
@@ -341,21 +370,31 @@
     </nav>
 
     <section class="hero">
-        <h1>CREW UO</h1>
-        <p>A classic Ultima Online experience reborn. Relive the golden era of Britannia with balanced mechanics, active staff, and a passionate community.</p>
+        <!-- REPLACE 'logo.jpg' WITH THE ACTUAL FILE NAME OF YOUR PORTAL IMAGE -->
+        <img src="crewuo_logo.jpg" alt="CrewUO Portal" class="hero-logo">
+        
+        <div class="hero-subheading">ULTIMA ONLINE &bull; PRIVATE SHARD</div>
+        
+        <h1>CREWUO</h1>
+        
+        <p>Welcome to the Crew — hoist the sails, sharpen your blade, and step through the portal. The adventure begins here.</p>
+        
+        <div class="server-status">
+            <div class="status-indicator">
+                <span class="dot"></span>
+                <span>ONLINE</span>
+            </div>
+        </div>
+
         <div class="cta-buttons">
-            <a href="#play" class="btn btn-primary">Connect Now</a>
-            <a href="https://discord.gg/your-link" target="_blank" class="btn btn-secondary"><i class="fab fa-discord"></i> Join Discord</a>
+            <a href="https://discord.gg/your-link" target="_blank" class="btn btn-primary">
+                <i class="fab fa-discord"></i> Join our Discord
+            </a>
+            <a href="#play" class="btn btn-dark">
+                <i class="fa-solid fa-anchor"></i> Server Info
+            </a>
         </div>
     </section>
-
-    <!-- Corrected Statically Green Server Status Block -->
-    <div class="server-status">
-        <div class="status-indicator">
-            <span class="dot"></span>
-            <span>ONLINE</span>
-        </div>
-    </div>
 
     <section class="section" id="features">
         <h2 class="section-title">Shard Features</h2>
